@@ -19,4 +19,6 @@ class Universidad{
     Alumno buscarAlumnoNombre(string);
     Alumno buscarAlumnoID(string);
     void eliminarAlumnoID(string);
+
+    void recorrerCursos();
 };
