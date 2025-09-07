@@ -13,6 +13,7 @@ class Curso{
 
     public:
     Curso(string,int,string,string);
+    Curso();
     NodoAlumno* head;
 
     string getID();
@@ -20,8 +21,9 @@ class Curso{
     int getCantMax();
     string getCarrera();
     string getProfesor();
-    void toString();
+    string toString();
 
     void insertar(NodoAlumno);
     void buscar(string);
+    void recorrerCurso();
 };
