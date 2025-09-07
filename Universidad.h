@@ -1,3 +1,4 @@
+#pragma once
 #include "Curso.h"
 #include "NodoCurso.h"
 #include <string>

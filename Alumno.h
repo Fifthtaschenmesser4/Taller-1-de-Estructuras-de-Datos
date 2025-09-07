@@ -1,4 +1,4 @@
-#pragma one
+#pragma once
 #include <string>
 using namespace std;
 //identificador único, nombre, apellido, carrera y fecha de ingreso
