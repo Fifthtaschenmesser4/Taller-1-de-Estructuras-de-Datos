@@ -4,8 +4,15 @@
 ListaCursos::ListaCursos(){
     head = nullptr;
 }
-void ListaCursos::registrarCurso(NodoCurso){
-
+void ListaCursos::insertarCurso(NodoCurso* nodo){
+    NodoCurso* aux = head;
+    if(aux==nullptr){
+        head=nodo;
+    }
+    while(aux->sigCurso != nullptr){
+        aux = aux->sigCurso;
+    }
+    aux->sigCurso = nodo;
 }
 
 Curso* ListaCursos::buscarCursoID(string){
