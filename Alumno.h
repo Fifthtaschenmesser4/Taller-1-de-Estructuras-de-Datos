@@ -12,5 +12,5 @@ class Alumno{
     string getApellido();
     string getCarrera();
     string getFecha();
-    void toString();
+    string toString();
 };

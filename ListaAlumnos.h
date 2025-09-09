@@ -7,7 +7,7 @@ class ListaAlumnos{
     public:
     ListaAlumnos();
     ~ListaAlumnos(){};
-    void insertarAlumno(NodoAlumno);
+    void insertarAlumno(Alumno);
     Alumno* buscarAlumnoNombre(string);
     Alumno* buscarAlumnoID(string);
     void eliminarAlumnoID(string);

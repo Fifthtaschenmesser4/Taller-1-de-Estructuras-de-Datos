@@ -4,13 +4,26 @@
 #include "NodoAlumno.h"
 #include "NodoCurso.h"
 #include "Universidad.h"
+#include "ListaCursos.h"
+#include "ListaAlumnos.h"
 
 class Sistema{
     public:
-    Universidad getInstance();
-    crearAlumno(string,string,string,string);
-    crearCurso(string,int,string,string);
+    void crearAlumno(string,string,string,string);
+    void crearCurso(string,int,string,string);
+    void insertarCurso(Curso);
+    void insertarAlumno(Alumno);
+
+    string buscarCursoID(string);
+    string buscarCursoNombre(string);
+    void eliminarCursoID(string);
+
+    string buscarAlumnoNombre(string);
+    string buscarAlumnoID(string);
+    void eliminarAlumnoID(string);
+
+    void recorrerCursos();
     private:
-    Universidad();
-    Universidad universidad;
+    ListaCursos listaCursos;
+    ListaAlumnos listaAlumnos;
 };

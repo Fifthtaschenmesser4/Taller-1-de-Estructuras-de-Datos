@@ -23,6 +23,6 @@ string Alumno::getCarrera(){
 string Alumno::getFecha(){
     return fechaIngreso;
 }
-void Alumno::toString(){
-    std::cout<<nombre<<" "<<apellido<<", "<<carrera<<", ingreso: "<<fechaIngreso<<endl;
+string Alumno::toString(){
+    return nombre+" "+apellido+", "+carrera+", ingreso: "+fechaIngreso;
 }

@@ -23,7 +23,7 @@ class Curso{
     string getProfesor();
     string toString();
 
-    void insertar(NodoAlumno);
+    void insertar(Alumno);
     void buscar(string);
     void recorrerCurso();
 };

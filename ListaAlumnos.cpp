@@ -1,19 +1,21 @@
 #include "ListaAlumnos.h"
+#include "Alumno.h"
 #include <iostream>
 
 ListaAlumnos::ListaAlumnos(){
     head = nullptr;
 }
 
-void ListaAlumnos::insertarAlumno(NodoAlumno* nodo){
+void ListaAlumnos::insertarAlumno(Alumno alumno){
+    NodoAlumno* nuevo = new NodoAlumno(alumno);
     NodoAlumno* aux = head;
     if(aux==nullptr){
-        head=nodo;
+        head=nuevo;
     }
     while(aux->sigAlumno != nullptr){
         aux = aux->sigAlumno;
     }
-    aux->sigAlumno = nodo;
+    aux->sigAlumno = nuevo;
 }
 Alumno* ListaAlumnos::buscarAlumnoNombre(string){
 

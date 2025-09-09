@@ -4,15 +4,16 @@
 ListaCursos::ListaCursos(){
     head = nullptr;
 }
-void ListaCursos::insertarCurso(NodoCurso* nodo){
+void ListaCursos::insertarCurso(Curso curso){
+    NodoCurso* nuevo = new NodoCurso(curso);
     NodoCurso* aux = head;
     if(aux==nullptr){
-        head=nodo;
+        head=nuevo;
     }
     while(aux->sigCurso != nullptr){
         aux = aux->sigCurso;
     }
-    aux->sigCurso = nodo;
+    aux->sigCurso = nuevo;
 }
 
 Curso* ListaCursos::buscarCursoID(string){
@@ -28,5 +29,9 @@ void ListaCursos::eliminarAlumnoID(string){
 }
 
 void ListaCursos::recorrerCursos(){
-
+    NodoCurso* aux = head;
+    while(aux!=nullptr){
+        cout<<aux->getCurso().toString()<<endl;
+        aux = aux->sigCurso;
+    }
 }

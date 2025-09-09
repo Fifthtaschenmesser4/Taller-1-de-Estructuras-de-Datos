@@ -7,7 +7,7 @@ class ListaCursos{
     public:
     ListaCursos();
     ~ListaCursos(){};
-    void insertarCurso(NodoCurso);
+    void insertarCurso(Curso);
     Curso* buscarCursoID(string);
     Curso* buscarCursoNombre(string);
     void eliminarAlumnoID(string);
