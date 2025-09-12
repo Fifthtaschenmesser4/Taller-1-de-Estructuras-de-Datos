@@ -5,22 +5,20 @@
 //código único, nombre, cantidad máxima de estudiantes, carrera y nombre del profesor
 class Curso{
     private:
-    string id;
+    int id;
     string nombreCurso;
     int cantMaxima;
     string carreraCurso;
     string profesor;
 
     public:
-    Curso(string,int,string,string);
+    Curso(int,string,int,string,string);
     Curso();
     NodoAlumno* head;
 
-    string getID();
+    int getID();
     string getNombre();
     int getCantMax();
-    string getCarrera();
-    string getProfesor();
     string toString();
 
     void insertar(Alumno);

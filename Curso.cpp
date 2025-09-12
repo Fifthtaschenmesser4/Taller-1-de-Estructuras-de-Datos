@@ -1,7 +1,8 @@
 #include "Curso.h"
 #include <iostream>
 
-Curso::Curso(string nombreCurso,int cantMaxima,string carreraCurso, string Profesor){
+Curso::Curso(int id, string nombreCurso,int cantMaxima,string carreraCurso, string Profesor){
+    this -> id = id;
     this -> nombreCurso = nombreCurso;
     this -> cantMaxima = cantMaxima;
     this -> carreraCurso = carreraCurso;
@@ -25,6 +26,16 @@ void Curso::insertar(Alumno nuevoAlumno){
 
 string Curso::toString(){
     return nombreCurso+", máximo estudiantes: "+to_string(cantMaxima)+", carrera: "+carreraCurso+", profe: "+profesor;
+}
+
+int Curso::getID(){
+    return id;
+}
+string Curso::getNombre(){
+    return nombreCurso;
+}
+int Curso::getCantMax(){
+    return cantMaxima;
 }
 
 void Curso::recorrerCurso(){

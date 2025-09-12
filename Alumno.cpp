@@ -8,7 +8,7 @@ Alumno::Alumno(string nombre, string apellido, string carrera, string fechaIngre
     this -> fechaIngreso = fechaIngreso;
 }
 
-string Alumno::getID(){
+int Alumno::getID(){
     return id;
 }
 string Alumno::getNombre(){

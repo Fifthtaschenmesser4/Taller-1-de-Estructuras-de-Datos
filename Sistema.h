@@ -9,21 +9,26 @@
 
 class Sistema{
     public:
+    Sistema();
     void crearAlumno(string,string,string,string);
     void crearCurso(string,int,string,string);
-    void insertarCurso(Curso);
-    void insertarAlumno(Alumno);
 
-    string buscarCursoID(string);
-    string buscarCursoNombre(string);
+    Curso buscarCursoID(string);
+    Curso buscarCursoNombre(string);
     void eliminarCursoID(string);
 
-    string buscarAlumnoNombre(string);
-    string buscarAlumnoID(string);
+    Alumno buscarAlumnoNombre(string);
+    Alumno buscarAlumnoID(string);
     void eliminarAlumnoID(string);
-
+    void recorrerAlumnos();
     void recorrerCursos();
     private:
     ListaCursos listaCursos;
     ListaAlumnos listaAlumnos;
+    int idsAlumno;
+    int idsCurso;
+    int nuevaIDalumno();
+    int nuevaIDcurso();
+    void insertarCurso(Curso);
+    void insertarAlumno(Alumno);
 };
