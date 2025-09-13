@@ -11,7 +11,7 @@ class Alumno{
     ListaCursos cursosAlumno;  
     ListaNotas notasAlumno; 
     public:
-    Alumno(int,string,string,string,string);
+    Alumno(int id,string nombre,string apellido,string carrera,string fechaIngreso);
     Alumno();
     int getID();
     string getNombre();

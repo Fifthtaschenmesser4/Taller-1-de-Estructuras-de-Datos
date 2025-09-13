@@ -7,11 +7,11 @@ class ListaCursos{
     public:
     ListaCursos();
     ~ListaCursos(){};
-    void insertarCurso(Curso);
+    void insertarCurso(Curso curso);
     
-    void printInfosBusqueda(string);
-    void printInfosBusqueda(int);
-    void eliminarCursoDeAlumno(int);
-    Curso* obtenerCurso(int);
+    void printInfosBusqueda(string nombreCurso);
+    void printInfosBusqueda(int idCurso);
+    void eliminarCursoDeAlumno(int idCurso);
+    Curso* obtenerCurso(int idCurso);
     void printLista();
 };

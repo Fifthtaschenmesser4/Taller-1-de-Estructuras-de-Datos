@@ -2,7 +2,7 @@
 #include "Curso.h"
 class NodoCurso{
     public:
-    NodoCurso(Curso);
+    NodoCurso(Curso curso);
     ~NodoCurso(){};
     NodoCurso* sigCurso;
     Curso getCurso();

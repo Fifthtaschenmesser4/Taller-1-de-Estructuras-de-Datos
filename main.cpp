@@ -47,7 +47,7 @@ void printMenu5(){
     cout<<"5. Atrás"<<endl;
     cout<<"Ingrese numero>> ";
 }
-void iniciarMenu1(Sistema systema){
+void iniciarMenu1(Sistema& systema){
     int opcion;
     cout<<"----- Menú de Manejo de Alumnos -----"<<endl;
     do{
@@ -89,7 +89,7 @@ void iniciarMenu1(Sistema systema){
         }
     }while(opcion != 5);
 }
-void iniciarMenu2(Sistema systema){
+void iniciarMenu2(Sistema& systema){
     int opcion;
     cout<<"----- Menú de Manejo de Cursos -----"<<endl;
     do{
@@ -131,7 +131,7 @@ void iniciarMenu2(Sistema systema){
         }
     }while(opcion != 5);
 }
-void iniciarMenu3(Sistema systema){
+void iniciarMenu3(Sistema& systema){
     int opcion;
     cout<<"----- Menú de Manejo de Inscripciones -----"<<endl;
     do{
@@ -170,7 +170,7 @@ void iniciarMenu3(Sistema systema){
        
     }while(opcion != 3);
 }
-void iniciarMenu4(Sistema systema){
+void iniciarMenu4(Sistema& systema){
 int opcion;
     cout<<"----- Menú de Manejo de Notas -----"<<endl;
     do{
@@ -199,7 +199,7 @@ int opcion;
        
     }while(opcion != 2);
 }
-void iniciarMenu5(Sistema systema){
+void iniciarMenu5(Sistema& systema){
     int opcion;
     cout<<"----- Menú de Manejo de Consultas y Reportes -----"<<endl;
     do{
@@ -247,7 +247,7 @@ void iniciarMenu5(Sistema systema){
         }
     }while(opcion != 5);
 }
-void iniciarPrograma(Sistema systema){
+void iniciarPrograma(Sistema& systema){
     int opcion;
     cout<<"¡Bienvenido a la gestiones de la Universidad!"<<endl;
     do{
@@ -256,14 +256,19 @@ void iniciarPrograma(Sistema systema){
     switch(opcion){
         case 1:
         iniciarMenu1(systema);
+        break;
         case 2:
         iniciarMenu2(systema);
+        break;
         case 3:
         iniciarMenu3(systema);
+        break;
         case 4:
         iniciarMenu4(systema);
+        break;
         case 5:
         iniciarMenu5(systema);
+        break;
         case 6:
             cout<<"Terminando programa . . .";
             break;

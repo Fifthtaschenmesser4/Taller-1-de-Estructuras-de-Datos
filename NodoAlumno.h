@@ -3,7 +3,7 @@
 class NodoAlumno{
     public:
     NodoAlumno();
-    NodoAlumno(Alumno);
+    NodoAlumno(Alumno alumno);
     ~NodoAlumno(){};
     NodoAlumno* sigAlumno;
     Alumno getAlumno();

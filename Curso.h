@@ -15,7 +15,7 @@ class Curso{
     ListaAlumnos miembrosCurso;
 
     public:
-    Curso(int,string,int,string,string);
+    Curso(int id,string nombre,int cantmaxima,string carrera,string profesor);
     Curso();
     ~Curso(){};
 
@@ -23,8 +23,8 @@ class Curso{
     string getNombre();
     int getCantMax();
     string toString();
-    void insertar(Alumno);
+    void insertar(Alumno alumno);
     void recorrerCurso();
-    void eliminarAlumno(int);
+    void eliminarAlumno(int idAlumno);
     void autoEliminarse();
 };
