@@ -1,6 +1,6 @@
 #pragma once
 #include "NodoAlumno.h"
-
+#include <string>
 class ListaAlumnos{
     private:
     NodoAlumno* head;
@@ -8,8 +8,11 @@ class ListaAlumnos{
     ListaAlumnos();
     ~ListaAlumnos(){};
     void insertarAlumno(Alumno);
-    Alumno* buscarAlumnoNombre(string);
-    Alumno* buscarAlumnoID(string);
-    void eliminarAlumnoID(string);
-    void recorrerAlumnos();
+    Alumno* obtenerAlumno(int);
+    void printInfosBusqueda(string);
+    void printInfosBusqueda(int);
+    void eliminarAlumnoID(int);
+    void printLista();
+    void printLista(string carrera);
+    void cursoEliminarse(int idCurso);
 };

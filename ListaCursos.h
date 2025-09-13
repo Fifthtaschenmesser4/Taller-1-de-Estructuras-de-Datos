@@ -1,6 +1,6 @@
 #pragma once
 #include "NodoCurso.h"
-
+#include <string>
 class ListaCursos{
     private:
     NodoCurso* head;
@@ -8,8 +8,10 @@ class ListaCursos{
     ListaCursos();
     ~ListaCursos(){};
     void insertarCurso(Curso);
-    Curso* buscarCursoID(string);
-    Curso* buscarCursoNombre(string);
-    void eliminarAlumnoID(string);
-    void recorrerCursos();
+    
+    void printInfosBusqueda(string);
+    void printInfosBusqueda(int);
+    void eliminarCursoDeAlumno(int);
+    Curso* obtenerCurso(int);
+    void printLista();
 };

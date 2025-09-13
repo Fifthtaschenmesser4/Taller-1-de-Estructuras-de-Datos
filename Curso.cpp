@@ -1,27 +1,17 @@
 #include "Curso.h"
 #include <iostream>
 
-Curso::Curso(int id, string nombreCurso,int cantMaxima,string carreraCurso, string Profesor){
+Curso::Curso(int id, string nombreCurso,int cantMaxima,string carreraCurso, string Profesor)
+:miembrosCurso(){
     this -> id = id;
     this -> nombreCurso = nombreCurso;
     this -> cantMaxima = cantMaxima;
     this -> carreraCurso = carreraCurso;
     this -> profesor = profesor;
-    head = nullptr;
 }
 
 void Curso::insertar(Alumno nuevoAlumno){
-    NodoAlumno* nuevo = new NodoAlumno(nuevoAlumno);
-    //***METODO AGREGAR PUNTERO DE ESTE NODO A UNA LISTA EN ALUMNO
-    NodoAlumno* aux = head;
-    if(aux==nullptr){
-        head=nuevo;
-    }
-    while(aux->sigAlumno != nullptr){
-        aux = aux->sigAlumno;
-    }
-    aux->sigAlumno = nuevo;
-    return;
+    miembrosCurso.insertarAlumno(nuevoAlumno);
 }
 
 string Curso::toString(){
@@ -39,9 +29,13 @@ int Curso::getCantMax(){
 }
 
 void Curso::recorrerCurso(){
-    NodoAlumno* aux = head;
-    while(aux!=nullptr){
-        cout<<aux->getAlumno().toString()<<endl;
-        aux = aux->sigAlumno;
-    }
+   miembrosCurso.printLista();
+}
+
+void Curso::eliminarAlumno(int id){
+    miembrosCurso.eliminarAlumnoID(id);
+}
+
+void Curso::autoEliminarse(){
+    miembrosCurso.cursoEliminarse(id);
 }

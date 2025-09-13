@@ -2,6 +2,7 @@
 #include "Alumno.h"
 class NodoAlumno{
     public:
+    NodoAlumno();
     NodoAlumno(Alumno);
     ~NodoAlumno(){};
     NodoAlumno* sigAlumno;
