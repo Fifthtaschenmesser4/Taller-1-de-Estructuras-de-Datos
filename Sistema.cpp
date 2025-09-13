@@ -84,9 +84,10 @@ void Sistema::eliminarAlumnoCurso(int idAlumno, int idCurso){
 
 void Sistema::inscribirAlumnoCurso(int idAlumno,int idCurso){
     Alumno* al = listaAlumnos.obtenerAlumno(idAlumno);
+    NodoAlumno alumno(*al);
     Curso* cr = listaCursos.obtenerCurso(idCurso);
     if(al != nullptr and cr != nullptr){
-        cr->insertar(*al);
+        cr->insertar(alumno);
         return;
     }
     cout<<"Una o ambas ID's es/son inválidas"<<endl;

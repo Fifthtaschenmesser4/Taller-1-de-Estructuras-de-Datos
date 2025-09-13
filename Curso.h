@@ -1,5 +1,4 @@
 #pragma once
-#include "Alumno.h"
 #include "NodoAlumno.h"
 #include "ListaAlumnos.h"
 #include <string>
@@ -23,7 +22,7 @@ class Curso{
     string getNombre();
     int getCantMax();
     string toString();
-    void insertar(Alumno alumno);
+    void insertar(NodoAlumno alumno);
     void recorrerCurso();
     void eliminarAlumno(int idAlumno);
     void autoEliminarse();
